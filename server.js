@@ -8,7 +8,7 @@ const Context = require('slapp-context-beepboop')
 var port = process.env.PORT || 3000
 
 var slapp = Slapp({
-	verify_token: process.env.SLACK_VERIFY_TOKEN
+	verify_token: process.env.SLACK_VERIFY_TOKEN,
 	convo_store: ConvoStore(),
 	context: Context()
 })
