@@ -15,8 +15,6 @@ var slapp = Slapp({
 
 require('./lib/bot')(slapp)
 
-console.log(process.env)
-
 var slackapi = require('./lib/slackapi')
 var toke = {'token':'one'}
 slackapi('channels.list', {'token': process.env.SLACK_API_TOKEN }, (err, data) => {
