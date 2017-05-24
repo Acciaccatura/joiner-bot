@@ -15,16 +15,6 @@ var slapp = Slapp({
 
 require('./lib/bot')(slapp)
 
-var slackapi = require('./lib/slackapi')
-var toke = {'token':'one'}
-slackapi('channels.list', {'token': process.env.SLACK_API_TOKEN }, (err, data) => {
-	if (err) { 
-		console.log(err)
-		return 
-	}
-	console.log(data)
-})
-
 var app = slapp.attachToExpress(express())
 app.listen(port, () => {
   console.log('This port: $' + port + '.00\nTeamwork: Priceless')
