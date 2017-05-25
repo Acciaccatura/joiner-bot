@@ -19,7 +19,3 @@ var app = slapp.attachToExpress(express())
 app.listen(port, () => {
   console.log('This port: $' + port + '.00\nTeamwork: Priceless')
 })
-
-const Fuse = require('fuse.js')
-var fuse = new Fuse([{'name': 'gosh'}, {'name': 'gash'}, {'name': 'rofl'}, {'name': 'tent'}], { 'threshold': 0.5, 'location': 0, 'distance': 100, 'keys': ['name']})
-console.log(fuse.search('gose'))
