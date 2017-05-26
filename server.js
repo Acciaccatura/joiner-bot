@@ -14,7 +14,6 @@ var slapp = Slapp({
 })
 
 require('./lib/bot')(slapp)
-console.log(slapp)
 
 var app = slapp.attachToExpress(express())
 app.listen(port, () => {
