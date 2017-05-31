@@ -16,6 +16,11 @@ var slapp = Slapp({
 require('./lib/bot')(slapp)
 
 var app = slapp.attachToExpress(express())
+
+app.use('/', (req, res) => {
+	res.send('Just a quick ol\' butt')
+})
+
 app.listen(port, () => {
   console.log('This port: $' + port + '.00\nTeamwork: Priceless')
 })
