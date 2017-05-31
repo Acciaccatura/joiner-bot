@@ -17,8 +17,13 @@ require('./lib/bot')(slapp)
 
 var app = slapp.attachToExpress(express())
 
+//Quick express app (move this later):
+app.set('view engine', 'pug')
+const fs = require('fs')
 app.use('/', (req, res) => {
-	res.send('Just a quick ol\' butt')
+	fs.readFile(__dirname + '/lib/commands/whitelist.json', 'utf-8', (err, data) => {
+		res.render('index', { 'whitelist': JSON.parse(data) })
+	})
 })
 
 app.listen(port, () => {
