@@ -12,7 +12,7 @@ var slapp = Slapp({
 	convo_store: ConvoStore(),
 	context: Context()
 })
-
+console.log(slapp)
 require('./lib/bot')(slapp)
 
 var app = slapp.attachToExpress(express())
