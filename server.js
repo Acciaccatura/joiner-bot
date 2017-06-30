@@ -11,7 +11,6 @@ var port = process.env.PORT || 3000
 
 var slapp = Slapp({
   verify_token: process.env.SLACK_VERIFY_TOKEN,
-  convo_store: ConvoStore(),
   context: Context({
   	app_token: SLACK_APP_TOKEN,
   	bot_token: SLACK_BOT_TOKEN
