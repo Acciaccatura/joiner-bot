@@ -5,7 +5,7 @@ const SLACK_BOT_TOKEN = process.env.SLACK_BOT_TOKEN
 
 const express = require('express')
 const Slapp = require('slapp')
-const context = require('./lib/')
+const context = require('./lib/context')
 
 var port = process.env.PORT || 3000
 
