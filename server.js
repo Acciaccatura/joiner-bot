@@ -5,8 +5,7 @@ const SLACK_BOT_TOKEN = process.env.SLACK_BOT_TOKEN
 
 const express = require('express')
 const Slapp = require('slapp')
-const ConvoStore = require('slapp-convo-beepboop')
-const Context = require('slapp-context-beepboop')
+const context = require('./lib/')
 
 var port = process.env.PORT || 3000
 
@@ -14,8 +13,8 @@ var slapp = Slapp({
   verify_token: process.env.SLACK_VERIFY_TOKEN,
   convo_store: ConvoStore(),
   context: Context({
-  	app_token: SLAPP_APP_TOKEN,
-  	bot_token: SLAPP_BOT_TOKEN
+  	app_token: SLACK_APP_TOKEN,
+  	bot_token: SLACK_BOT_TOKEN
   })
 })
 console.log(slapp)
