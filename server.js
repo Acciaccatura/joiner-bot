@@ -11,12 +11,11 @@ var port = process.env.PORT || 3000
 
 var slapp = Slapp({
   verify_token: process.env.SLACK_VERIFY_TOKEN,
-  context: Context({
+  context: context({
   	app_token: SLACK_APP_TOKEN,
   	bot_token: SLACK_BOT_TOKEN
   })
 })
-console.log(slapp)
 require('./lib/bot')(slapp)
 
 var app = slapp.attachToExpress(express())
