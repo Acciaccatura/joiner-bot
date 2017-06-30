@@ -22,6 +22,7 @@ var slapp = Slapp({
   verify_token: process.env.SLACK_VERIFY_TOKEN,
   context: context(slapp, contextData)
 })
+slapp.meta = contextData
 require('./lib/bot')(slapp)
 
 var app = slapp.attachToExpress(express())
